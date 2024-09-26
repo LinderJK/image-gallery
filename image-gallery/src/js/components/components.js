@@ -1,5 +1,6 @@
 import createAuthor, {createColorChip, createDescription, createImage, createLikes} from "./ui.js";
 
+
 export function createCard(image) {
   const {urls, description, user, likes, color} = image;
   const cardDiv = document.createElement('div');
