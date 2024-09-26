@@ -7,8 +7,6 @@ const PAGE = 1;
 const PER_PAGE = 10;
 const QUERY = "cat";
 const COLOR = "green";
-
-
 const data = new Date().getFullYear();
 
 const app = document.querySelector('#app');
@@ -20,7 +18,11 @@ app.innerHTML = `
 
       <input id="search-input" class="w-full rounded-2xl p-3 shadow-2xl hover:shadow-lime-300 duration-700 ease-in-out focus:outline-none focus:ring-0 focus:border-lime-600 focus:shadow-lime-300" placeholder="Inter your search"  autofocus autocomplete="off" />
       <input type="color" id="color-input" class="w-20" datatype="hex">
-      <button id="search-btn" class="min-w-44 rounded-2xl p-3 shadow-2xl text-white bg-lime-700 hover:bg-lime-400 duration-700 ease-in-out uppercase font-medium">Search</button>
+      <button id="search-btn" class="min-w-44 rounded-2xl p-3 shadow-2xl text-white bg-lime-700 hover:bg-lime-400 hover:shadow-inner hover:scale-105 duration-700 ease-in-out uppercase font-medium">
+  Search
+</button>
+
+
       </div>
     </header>
     <main id="images-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
