@@ -4,13 +4,16 @@ import createAuthor, {createColorChip, createDescription, createImage, createLik
 export function createCard(image) {
   const {urls, description, user, likes, color} = image;
   const cardDiv = document.createElement('div');
-  cardDiv.className ='w-full h-full relative cursor-pointer overflow-hidden rounded-2xl hover:brightness-150 duration-700 ease-in-out';
-
+  cardDiv.className = 'w-full h-full relative cursor-pointer overflow-hidden rounded-2xl opacity-0 translate-y-10 transition-all duration-500 ease-in-out hover:brightness-150';
   const img = createImage(urls.regular, description);
   const desc = createInfoBlock(description, user.username, likes, color);
 
   cardDiv.append(desc);
   cardDiv.append(img);
+
+  requestAnimationFrame(() => {
+    cardDiv.classList.remove('opacity-0', 'translate-y-10');
+  });
 
   cardDiv.addEventListener('click', () => {
     desc.classList.toggle('opacity-0');
