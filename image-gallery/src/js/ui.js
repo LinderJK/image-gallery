@@ -2,7 +2,7 @@ export function createImage(url, alt) {
   const img = document.createElement('img');
   img.src = url;
   img.alt = alt;
-  img.className ='w-full h-full object-cover hover:scale-105 duration-700 ease-in-out';
+  img.className ='w-full h-full object-cover';
   return img;
 }
 
