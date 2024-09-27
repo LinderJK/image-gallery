@@ -1,3 +1,4 @@
+import { saveToLS } from "./LS";
 
 const API_URL = "https://api.unsplash.com/search/photos/";
 const API_KEY = import.meta.env.VITE_API_KEY;
@@ -29,8 +30,8 @@ export function createQuery(query, page, perPage, color) {
 
 export async function fetchImages(query, page, perPage, color) {
   const queryString = createQuery(query, page, perPage, color);
+  saveToLS({ query, color });
   const fullUrl = `${API_URL}?${queryString}`;
-
   try {
     const images = await fetchData(fullUrl);
     console.log(images);
