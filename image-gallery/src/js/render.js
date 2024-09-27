@@ -2,6 +2,7 @@ import {createCard} from "./components/components.js";
 
 export function renderContent(images, container) {
   console.log(images);
+
   container.replaceChildren();
 
   if (!images || images.length === 0) {
@@ -12,6 +13,13 @@ export function renderContent(images, container) {
     return
   }
 
+  images.forEach((image) => {
+    const card = createCard(image);
+    container.append(card);
+  })
+}
+
+export function applyNewContent(images, container) {
   images.forEach((image) => {
     const card = createCard(image);
     container.append(card);
