@@ -1,9 +1,8 @@
 import githubLogo from "../assets/github-mark-white.svg";
 import rssLogo from "../assets/rss-logo.svg";
-import { infiniteScroll } from "./components/pagination.js";
+import { infiniteScroll } from "./utils/infiniteScroll.js";
 import {renderContent} from "./render.js";
 import {fetchImages} from "./services/API.js";
-import { getFromLS, saveToLS } from "./services/LS.js";
 
 
 const PAGE = 1;
