@@ -26,6 +26,13 @@ export function applyNewContent(images, container) {
   })
 }
 
+export function applyInfoBlock(container, info) {
+  const infoBlock = document.createElement('div');
+  infoBlock.className = 'text-white text-center text-3xl';
+  infoBlock.textContent = info;
+  container.append(infoBlock);
+}
+
 export function renderError(error, container) {
   console.log(error);
   container.replaceChildren();
