@@ -1,7 +1,7 @@
 import githubLogo from "../assets/github-mark-white.svg";
 import rssLogo from "../assets/rss-logo.svg";
 import { infiniteScroll } from "./utils/infiniteScroll.js";
-import {renderContent} from "./render.js";
+import {renderContent, renderError} from "./render.js";
 import {fetchImages} from "./services/API.js";
 
 
