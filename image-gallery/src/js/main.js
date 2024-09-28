@@ -15,9 +15,9 @@ let currentColor = '';
 
 const app = document.querySelector('#app');
 app.innerHTML = `
- <div class="container mx-auto p-4">
-    <header class="py-12">
-      <h1 class="relative text-5xl uppercase text-white z-10">Image Gallery</h1>
+ <div class="container mx-auto p-4 relative">
+    <header class="mb-12 mt-5">
+      <h1 class="text-5xl uppercase text-white z-10">Image Gallery</h1>
       <form class="flex gap-4 my-2" id="search-form">
         <input required name="search-query" type="text" id="search-input" class="w-full rounded-2xl p-3 shadow-2xl hover:shadow-lime-300 duration-700 ease-in-out focus:outline-none focus:ring-0 focus:border-lime-600 focus:shadow-lime-300" placeholder="Inter your search"  autofocus autocomplete="off" />
         <div class="flex items-center">
@@ -44,15 +44,17 @@ app.innerHTML = `
     <main id="images-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
     </main>
-    <footer class="text-white bg-slate-900 bg-opacity-70 py-4 flex gap-4 justify-between items-center sticky bottom-0">
-    <a href="https://github.com/LinderJK" target="_blank" class="hover:rotate-180 transition-transform duration-300 ease-in-out">
-      <img src="${githubLogo}" alt="logo-github" class="w-10">
+    <footer class="text-white bg-slate-900 bg-opacity-70 py-4 fixed bottom-0 left-0 w-screen">
+    <div class="flex gap-4 justify-between items-center mx-auto max-w-5xl">
+     <a href="https://github.com/LinderJK" target="_blank" class="hover:rotate-180 transition-transform duration-300 ease-in-out">
+      <img src="${githubLogo}" alt="logo-github" class="w-8">
       </a>
       <p>Created by LinderJK</p>
       <p>&copy; ${data}</p>
       <a href="https://rs.school/courses/javascript-preschool-ru" target="_blank" class="hover:rotate-180 transition-transform duration-300 ease-in-out">
-       <img src="${rssLogo}" alt="logo-rss" class="w-10">
+       <img src="${rssLogo}" alt="logo-rss" class="w-8">
       </a>
+    </div>
     </footer>
   </div>
 `;
