@@ -2,6 +2,7 @@ export function createImage(url, alt) {
   const img = document.createElement('img');
   img.src = url;
   img.alt = alt;
+  img.setAttribute('loading', 'lazy');
   img.className ='w-full h-full object-cover';
   return img;
 }
