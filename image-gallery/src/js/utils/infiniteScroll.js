@@ -7,11 +7,11 @@ export function infiniteScroll(container) {
   let isLoading = false;
   let resizeTimeout;
   let count = 1;
-  const treshhold = 200;
+  const threshold = 1;
 
   window.onscroll = () => {
     if(!canScroll || isLoading) return;
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - treshhold) {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - threshold) {
       isLoading = true;
       canScroll = false;
       count += 1;
