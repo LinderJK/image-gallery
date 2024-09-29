@@ -34,13 +34,11 @@ export async function fetchImages(query, page, perPage, color) {
   const fullUrl = `${API_URL}?${queryString}`;
   try {
     const images = await fetchData(fullUrl);
-    console.log(images);
     if (images) {
-      console.log(images);
       return images;
     }
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return null;
   }
 }

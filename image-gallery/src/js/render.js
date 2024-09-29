@@ -1,7 +1,6 @@
 import {createCard} from "./components/components.js";
 
 export function renderContent(images, container) {
-  console.log(images);
 
   container.replaceChildren();
 
@@ -34,7 +33,6 @@ export function applyInfoBlock(container, info) {
 }
 
 export function renderError(error, container) {
-  console.log(error);
   container.replaceChildren();
   const feedback = document.createElement('p');
   feedback.className = 'text-3xl text-white';

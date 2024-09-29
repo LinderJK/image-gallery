@@ -21,22 +21,18 @@ export function infiniteScroll(container) {
         canScroll = true;
       })
       .catch((error) => {
-        console.log(error);
+        console.error(error);
         isLoading = false;
         canScroll = true;
       })
-      console.log('bottom');
     }
   }
 
   window.addEventListener('resize', (event) => {
-    console.log(event);
     canScroll = false;
-    console.log('canCalcScroll', canScroll);
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => {
       canScroll = true;
-      console.log('canCalcScroll', canScroll);
     }, 1000);
   })
 }
@@ -51,6 +47,5 @@ async function infiniteScrollCreateData(page, container) {
   }
   if(data) {
     applyNewContent(data.results, container, true);
-    console.log('data', data);
   }
 }

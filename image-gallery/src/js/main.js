@@ -68,7 +68,6 @@ colorSelect.addEventListener('change', (event) => {
     currentColor = '';
   }
   currentColor = event.target.value;
-  console.log(currentColor);
 })
 
 form.addEventListener("submit", async (event) => {
@@ -81,18 +80,15 @@ form.addEventListener("submit", async (event) => {
 
     if(data && imagesContainer) {
       renderContent(data.results, imagesContainer);
-      console.log(data);
     } else {
       renderError(new Error('Something went wrong'), imagesContainer);
     }
 })
 
 async function startApp() {
-  console.log('app started');
   const images = await fetchImages(QUERY, PAGE, PER_PAGE, COLOR);
   if(images && imagesContainer) {
     renderContent(images.results, imagesContainer);
-    console.log(images);
   } else {
     renderError(new Error('Something went wrong'), imagesContainer);
   }
