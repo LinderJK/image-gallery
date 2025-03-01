@@ -239,7 +239,7 @@ app.innerHTML = `
     <header class="mb-12 mt-5">
       <h1 class="text-5xl uppercase text-white z-10">Image Gallery</h1>
       <form class="flex gap-4 my-2" id="search-form">
-        <input required name="search-query" type="text" id="search-input" class="w-full rounded-2xl p-3 shadow-2xl hover:shadow-lime-300 duration-700 ease-in-out focus:outline-none focus:ring-0 focus:border-lime-600 focus:shadow-lime-300" placeholder="Inter your search"  autofocus autocomplete="off" />
+        <input required name="search-query" type="text" id="search-input" class="w-full rounded-2xl p-3 shadow-2xl hover:shadow-lime-300 duration-700 ease-in-out focus:outline-none focus:ring-0 focus:border-lime-600 focus:shadow-lime-300" placeholder="Enter your search"  autofocus autocomplete="off" />
         <div class="flex items-center">
           <select id="color-select" class="ml-1 bg-slate-900 border border-lime-700 text-white rounded-lg p-2 cursor-pointer focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-lime-500 hover:bg-lime-900 transition-colors duration-300 ease-in-out">
               <option value="" selected>Chooose color?</option>
