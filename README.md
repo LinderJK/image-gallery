@@ -23,11 +23,3 @@ The project is deployed and available at:
 
 👉 [**https://linderjk.github.io/image-gallery/
 **](https://linderjk.github.io/image-gallery/)
-
-## Installation & Running Locally
-
-```bash
-git clone https://github.com/your-username/project-name.git
-cd project-name
-npm install
-npm run dev
